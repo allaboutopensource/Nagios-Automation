@@ -1,0 +1,22 @@
+---
+# tasks file for nrpe-role
+       - name: Download NRPE (Ubuntu 64)
+         get_url: 
+           url: http://assets.nagios.com/downloads/nagiosxi/agents/linux-nrpe-agent.tar.gz
+           dest: /tmp/
+         when: 
+           ansible_distribution == 'Ubuntu' 
+
+       - name: Unarchive a nrpe agent file
+         unarchive:
+            src: "/tmp/linux-nrpe-agent.tar.gz"
+            dest: "/tmp"
+            remote_src: yes
+
+       - name: Running the script
+         shell: ./fullinstall {{ y }} {{ 172.25.3.110 }}
+         register: output
+         args:
+          chdir: /tmp/linux-nrpe-agent/
+         
+       - debug: var=output.stdout_lines

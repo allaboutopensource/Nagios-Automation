@@ -1,0 +1,8 @@
+---
+# tasks file for unregister-host
+
+     - name: API used to remove the services of the host from the Nagios XI
+       shell: 'curl -XDELETE "http://{{ xi_ip }}/nagiosxi/api/v1/config/service?apikey={{ api_key }}&host_name={{ ansible_default_ipv4.address }}&service_description=host_services"'
+
+     - name: API used to remove the host 
+       shell: 'curl -XDELETE "http://{{ xi_ip }}/nagiosxi/api/v1/config/host?apikey={{ api_key }}&host_name={{ ansible_hostname }}&applyconfig=1"'

@@ -1,0 +1,17 @@
+---
+
+     - name: API used to add the host to the Nagios XI
+       uri:
+          url: https://{{ xi_ip }}/nagiosxi/api/v1/config/host?apikey={{ api_key }}
+          body: "host_name={{ ansible_hostname }}&address={{ ansible_default_ipv4.address }}&use=common-host-linux&force=1&applyconfig=1"
+          method: POST
+          validate_certs: no
+          timeout: 120
+
+     - name: Add services to the host
+       uri:
+         url: https://{{ xi_ip }}/nagiosxi/api/v1/config/service?apikey={{ api_key }}
+         body: "host_name={{ ansible_hostname }}&service_description=Ping&use=xiwizard_linuxserver_ping_service&check_period=xi_timeperiod_24x7&notification_period=xi_timeperiod_24x7&force=1&applyconfig=1"
+         method: POST
+         validate_certs: no
+         timeout: 120
