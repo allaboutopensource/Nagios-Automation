@@ -1,4 +1,4 @@
-# system
+# nagios-automation
 #system script to fetch info
 import os
 import sys
