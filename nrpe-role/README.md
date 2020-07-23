@@ -1,7 +1,7 @@
 Role Name
 =========
 
-A brief description of the role goes here.
+This is the NRPE role which will install the NRPE agent on the centos clients.
 
 Requirements
 ------------
