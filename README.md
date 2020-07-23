@@ -1,4 +1,4 @@
-Playbook for setting up the Nagios agent on the Linux clients (CentOS/RHEL/) and add them to the monitoring in Nagios via the API.
+Playbook for setting up the Nagios agent on the Linux clients (CentOS/RHEL/) and add them to the monitoring in Nagios via the API. Your machine should be connected to internet to download the NRPE agent frm the Nagios website.
 
 There are several ways to automate Nagios XI but I am using the API method which could be faster then the other ways of automating Nagios.
 
