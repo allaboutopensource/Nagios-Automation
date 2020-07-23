@@ -1,7 +1,7 @@
 Role Name
 =========
 
-This is the NRPE role which will install the NRPE agent on the centos clients.
+This is the NRPE role which will download the nrpe agent from the Nagios site and install the NRPE agent on the centos/Ubuntu clients.
 
 Requirements
 ------------
