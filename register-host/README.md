@@ -1,7 +1,7 @@
 Role Name
 =========
 
-This role will uses a API which is used to add the host to the Nagios XI and a API which will add services to the host
+This role will uses a API which is used to add the host to the Nagios XI and a API which will add basic linux services to the host
 
 Requirements
 ------------
