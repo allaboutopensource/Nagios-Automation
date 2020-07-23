@@ -59,7 +59,7 @@
             remote_src: yes
 
     - name: Running the agent
-      shell: "./fullinstall -n --allowed-ips 149.24.38.140"
+      shell: "./fullinstall -n --allowed-ips <Nagios server IP address>"
       args:
          chdir: /tmp/linux-nrpe-agent
       register: scriptprogress
