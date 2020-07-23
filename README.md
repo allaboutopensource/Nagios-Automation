@@ -6,3 +6,10 @@ In this case I am using the automation software as ansible but you can feel free
 
 Normally most of the organisation uses software like Bigfix and other to push the agents to the client. 
 
+You need to mention the variable (vars) in the yaml. Nagios-XI IP address and api_key.
+
+Depending on your needs you need to edit the host files as well.
+
+After that you need to run the script name nagiosautomate.yml using the below command:
+    
+    ansible-playbook nagiosautomate.yml -i hosts
