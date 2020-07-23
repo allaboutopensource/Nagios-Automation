@@ -1,15 +1,15 @@
 --- 
 - hosts: linuxservers
-  remote_user: itops
+  remote_user: root
   gather_facts: true
   become: yes
   become_method: sudo
 
   vars:
-    xi_ip: 'cvrmnagiosxi001.ellucian.com'
-    api_key: 'BGFf0Pfae9dH9NTiPWNtVhVKcurBYQavM65NbDWI29maVfLLruum5p7gWRQbHh0p'
+    xi_ip: '<NagiosXi-server-IP>'
+    api_key: 'Nagios-API'
 
   roles: 
         - {role: nrpe-role}
         - {role: register-host}
-    #    - {role: unregister-host}
+        - {role: unregister-host}
