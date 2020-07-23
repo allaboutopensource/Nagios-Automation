@@ -6,12 +6,13 @@ This role will uses a API which is used to add the host to the Nagios XI and a A
 Requirements
 ------------
 
-You need to have NRPE client installed on the systems.
+You need to have NRPE client installed on the systems and ansible machine to be connected with the NAGIOS xi server
 
 Role Variables
 --------------
 
-None
+
+Nagios XI ip  address and API key 
 
 Dependencies
 ------------
