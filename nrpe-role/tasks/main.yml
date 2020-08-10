@@ -16,7 +16,7 @@
              - bc
         state: latest
       when:
-         ansible_distribution == 'CentOS'
+         ansible_distribution == 'CentOS' or ansible_distribution == 'RedHat'
 
     - name: Update Ubuntu with the prerequisites
       apt:
@@ -50,7 +50,7 @@
            url: http://assets.nagios.com/downloads/nagiosxi/agents/linux-nrpe-agent.tar.gz
            dest: /tmp/
       when: 
-           ansible_distribution == 'Ubuntu' or ansible_distribution == 'CentOS' 
+           ansible_distribution == 'Ubuntu' or ansible_distribution == 'CentOS' or ansible_distribution == 'RedHat'
 
     - name: Unarchive a nrpe agent file
       unarchive:
